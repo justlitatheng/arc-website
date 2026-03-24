@@ -333,7 +333,7 @@ export default function Home() {
               look.&rdquo;
             </p>
           </blockquote>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 mt-10">
             {[
               "Davis Peace Project — $10,000",
               "Raising $25,000 for Series 2",
