@@ -293,31 +293,6 @@ export default function Home() {
             A passionately treasured Khmer-led project, rooted in Battambang.
           </h2>
           <p
-            className="text-base sm:text-lg leading-relaxed mb-6"
-            style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
-          >
-            ARC started from something personal. As a Khmer person who has
-            grown up living between worlds, I found myself wanting to learn
-            more — not just about Cambodia&apos;s past, but about the full,
-            breathing spectrum of who Khmer people are, have been, and are
-            becoming. In a world growing more cross-cultural and
-            interconnected, many of us find ourselves navigating multiple
-            identities at once. The more I looked, the more I found. Artists,
-            athletes, writers, dreamers, and creators of all kinds — each one
-            a color, a weave, a pattern in something far more beautiful than
-            any single story could contain.
-          </p>
-          <p
-            className="text-base sm:text-lg leading-relaxed mb-6"
-            style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
-          >
-            ARC is my way of continuing that discovery, and contributing to
-            it. Not to make a point, but because these stories are worth
-            knowing, worth preserving, and worth celebrating. Because I am
-            Khmer too, and this is my way of falling more in love with where I
-            come from — and sharing that love with anyone who wants to look.
-          </p>
-          <p
             className="text-base sm:text-lg leading-relaxed mb-10"
             style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
           >
@@ -327,6 +302,37 @@ export default function Home() {
             Our team comprises Khmer youth coordinators, animators,
             photographers, and creators who bring these stories to life.
           </p>
+          <blockquote
+            className="border-l-2 pl-6"
+            style={{ borderColor: "#C9B8E8" }}
+          >
+            <p
+              className="text-base sm:text-lg leading-relaxed mb-6 italic"
+              style={{ color: "#5A4E78", fontFamily: "var(--font-dm-sans)" }}
+            >
+              &ldquo;ARC started from something personal. As a Khmer person
+              who has grown up living between worlds, I found myself wanting
+              to learn more — not just about Cambodia&apos;s past, but about
+              the full, breathing spectrum of who Khmer people are, have been,
+              and are becoming. In a world growing more cross-cultural and
+              interconnected, many of us find ourselves navigating multiple
+              identities at once. The more I looked, the more I found.
+              Artists, athletes, writers, dreamers, and creators of all kinds
+              — each one a color, a weave, a pattern in something far more
+              beautiful than any single story could contain.
+            </p>
+            <p
+              className="text-base sm:text-lg leading-relaxed italic"
+              style={{ color: "#5A4E78", fontFamily: "var(--font-dm-sans)" }}
+            >
+              ARC is my way of continuing that discovery, and contributing to
+              it. Not to make a point, but because these stories are worth
+              knowing, worth preserving, and worth celebrating. Because I am
+              Khmer too, and this is my way of falling more in love with where
+              I come from — and sharing that love with anyone who wants to
+              look.&rdquo;
+            </p>
+          </blockquote>
           <div className="flex flex-wrap gap-3">
             {[
               "Davis Peace Project — $10,000",
