@@ -15,6 +15,27 @@
   --font-body: var(--font-dm-sans);
 }
 
+@keyframes flapTop {
+  0%, 100% { transform-origin: 50% 100%; transform: scaleY(1) rotate(0deg); }
+  50%       { transform-origin: 50% 100%; transform: scaleY(0.7) rotate(-4deg); }
+}
+@keyframes flapTopR {
+  0%, 100% { transform-origin: 50% 100%; transform: scaleY(1) rotate(0deg); }
+  50%       { transform-origin: 50% 100%; transform: scaleY(0.7) rotate(4deg); }
+}
+@keyframes flapBot {
+  0%, 100% { transform-origin: 50% 0%; transform: scaleY(1) rotate(0deg); }
+  50%       { transform-origin: 50% 0%; transform: scaleY(0.75) rotate(-3deg); }
+}
+@keyframes flapBotR {
+  0%, 100% { transform-origin: 50% 0%; transform: scaleY(1) rotate(0deg); }
+  50%       { transform-origin: 50% 0%; transform: scaleY(0.75) rotate(3deg); }
+}
+@keyframes hover {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-4px); }
+}
+
 html {
   scroll-behavior: smooth;
 }

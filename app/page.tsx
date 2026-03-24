@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DragonFly from "@/components/DragonFly";
 
 export default function Home() {
   return (
@@ -33,13 +34,18 @@ export default function Home() {
         className="flex flex-col items-center justify-center py-32 px-6 text-center"
         style={{ backgroundColor: "#1A1A2E" }}
       >
-        <div className="mb-10">
+        <DragonFly width={140} />
+        <div
+          className="my-8"
+          style={{ width: 48, height: 1, backgroundColor: "#2A2A4E" }}
+        />
+        <div className="mb-8">
           <Image
             src="/logo_ARC_01.png"
             alt="ARC — Art Reach Cambodia logo"
-            width={120}
-            height={120}
-            style={{ mixBlendMode: "multiply" }}
+            width={200}
+            height={200}
+            style={{ mixBlendMode: "screen", background: "transparent" }}
             priority
           />
         </div>
@@ -77,15 +83,35 @@ export default function Home() {
             Cambodia is not a single story.
           </h2>
           <p
+            className="text-base sm:text-lg leading-relaxed mb-6"
+            style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
+          >
+            And it is not only the ones we keep telling. It is not forever
+            synonymous with the Khmer Rouge, or Angkor Wat, or Apsara dancers,
+            or de-mining operations, or the killing fields, or pagodas, or
+            ancient lore. It is not only a third-world country, an agriculture
+            economy, a Buddhist nation. I am not saying it isn&apos;t any of
+            that. I am saying it is not only that.
+          </p>
+          <p
+            className="text-base sm:text-lg leading-relaxed mb-6"
+            style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
+          >
+            It is also an Emmy Award winner crafting visual effects in
+            Hollywood. A Paralympic chess player who has redefined what is
+            possible. A novelist giving the Khmer imagination a home on the
+            page. An Olympic swimmer who trains with quiet, relentless
+            dedication. A runner who founded a club so other women could move
+            through the world with confidence. A photographer documenting
+            beauty that most people never get to see.
+          </p>
+          <p
             className="text-base sm:text-lg leading-relaxed"
             style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
           >
-            It is an Emmy Award winner crafting visual effects in Hollywood. A
-            Paralympic chess player who has redefined what is possible. A
-            novelist giving the Khmer imagination a home on the page. An
-            Olympic swimmer who trains with quiet, relentless dedication. These
-            are not exceptional cases — these are the people who have always
-            been here, doing extraordinary things. ARC exists to document them.
+            These stories exist too. They are evolving. They bridge the past
+            with the present, and they are building something more inclusive
+            for all of us to thrive in.
           </p>
         </div>
       </section>
@@ -104,7 +130,7 @@ export default function Home() {
             Our Mission
           </p>
           <p
-            className="text-base sm:text-lg leading-relaxed mb-14"
+            className="text-base sm:text-lg leading-relaxed mb-8"
             style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
           >
             ARC is a multi-modal documentary storytelling project dedicated to
@@ -115,6 +141,13 @@ export default function Home() {
             picture. The living, breathing present of Cambodian culture
             deserves to be documented with the same care and attention. That is
             what ARC is here to do.
+          </p>
+          <p
+            className="text-xl sm:text-2xl leading-snug italic mb-14"
+            style={{ color: "#1A1A2E", fontFamily: "var(--font-dm-sans)" }}
+          >
+            Khmer culture — past, present, and future — is a tapestry still
+            being woven, and every thread matters.
           </p>
           <p
             className="text-3xl sm:text-4xl leading-snug mb-4"
@@ -260,6 +293,31 @@ export default function Home() {
             A passionately treasured Khmer-led project, rooted in Battambang.
           </h2>
           <p
+            className="text-base sm:text-lg leading-relaxed mb-6"
+            style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
+          >
+            ARC started from something personal. As a Khmer person who has
+            grown up living between worlds, I found myself wanting to learn
+            more — not just about Cambodia&apos;s past, but about the full,
+            breathing spectrum of who Khmer people are, have been, and are
+            becoming. In a world growing more cross-cultural and
+            interconnected, many of us find ourselves navigating multiple
+            identities at once. The more I looked, the more I found. Artists,
+            athletes, writers, dreamers, and creators of all kinds — each one
+            a color, a weave, a pattern in something far more beautiful than
+            any single story could contain.
+          </p>
+          <p
+            className="text-base sm:text-lg leading-relaxed mb-6"
+            style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
+          >
+            ARC is my way of continuing that discovery, and contributing to
+            it. Not to make a point, but because these stories are worth
+            knowing, worth preserving, and worth celebrating. Because I am
+            Khmer too, and this is my way of falling more in love with where I
+            come from — and sharing that love with anyone who wants to look.
+          </p>
+          <p
             className="text-base sm:text-lg leading-relaxed mb-10"
             style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
           >
@@ -340,12 +398,15 @@ export default function Home() {
         className="py-8 text-center"
         style={{ backgroundColor: "#1A1A2E" }}
       >
-        <p
-          className="text-xs tracking-wide"
-          style={{ color: "#5A5470", fontFamily: "var(--font-dm-sans)" }}
-        >
-          © 2026 Art Reach Cambodia
-        </p>
+        <div className="flex items-center justify-center gap-3">
+          <DragonFly width={24} />
+          <p
+            className="text-xs tracking-wide"
+            style={{ color: "#5A5470", fontFamily: "var(--font-dm-sans)" }}
+          >
+            © 2026 Art Reach Cambodia
+          </p>
+        </div>
       </footer>
     </div>
   );
