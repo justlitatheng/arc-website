@@ -81,10 +81,11 @@ export default function Home() {
             style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
           >
             It is an Emmy Award winner crafting visual effects in Hollywood. A
-            Paralympic chess player defying every boundary placed before her. A
-            novelist putting the Khmer imagination on the page. An Olympic
-            swimmer cutting through water with quiet ferocity. These stories
-            exist. They are happening right now. ARC is here to document them.
+            Paralympic chess player who has redefined what is possible. A
+            novelist giving the Khmer imagination a home on the page. An
+            Olympic swimmer who trains with quiet, relentless dedication. These
+            are not exceptional cases — these are the people who have always
+            been here, doing extraordinary things. ARC exists to document them.
           </p>
         </div>
       </section>
@@ -107,11 +108,13 @@ export default function Home() {
             style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
           >
             ARC is a multi-modal documentary storytelling project dedicated to
-            capturing the diverse, living, evolving voices that make up Khmer
-            culture and identity. We believe in the danger of a single story.
-            When a culture is reduced to one narrative — especially one defined
-            by tragedy and the past — its living, breathing present becomes
-            invisible. ARC makes it visible.
+            capturing the diverse, living, and evolving voices that make up
+            Khmer culture and identity. For too long, Cambodia&apos;s story has
+            been told through two lenses — the glory of Angkor Wat and the
+            tragedy of the Khmer Rouge. Both are real. Neither is the whole
+            picture. The living, breathing present of Cambodian culture
+            deserves to be documented with the same care and attention. That is
+            what ARC is here to do.
           </p>
           <p
             className="text-3xl sm:text-4xl leading-snug mb-4"
@@ -144,7 +147,7 @@ export default function Home() {
             Series 1 — In Progress
           </p>
           <h2
-            className="text-3xl sm:text-4xl font-semibold mb-12"
+            className="text-3xl sm:text-4xl font-semibold mb-6"
             style={{
               color: "#1A1A2E",
               fontFamily: "var(--font-kantumruy)",
@@ -152,6 +155,14 @@ export default function Home() {
           >
             13 voices. 13 stories.
           </h2>
+          <p
+            className="text-base sm:text-lg leading-relaxed mb-12"
+            style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
+          >
+            Our first documentary video series features 13 Cambodian
+            individuals across two chapters — each telling their own story, in
+            their own words.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {/* Column 1 */}
             <div>
@@ -223,12 +234,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <p
-            className="mt-10 text-sm italic"
-            style={{ color: "#7B6FA0", fontFamily: "var(--font-dm-sans)" }}
-          >
-            Each subject tells their own story, in their own words.
-          </p>
         </div>
       </section>
 
@@ -262,8 +267,7 @@ export default function Home() {
             technologist, in partnership with SafeSpaceBTB — a grassroots,
             community-based, youth-led organization in Battambang, Cambodia.
             Our team comprises Khmer youth coordinators, animators,
-            photographers, and creators who bring these stories to life —
-            supported by Laura Fernández as general consultant.
+            photographers, and creators who bring these stories to life.
           </p>
           <div className="flex flex-wrap gap-3">
             {[
@@ -340,7 +344,7 @@ export default function Home() {
           className="text-xs tracking-wide"
           style={{ color: "#5A5470", fontFamily: "var(--font-dm-sans)" }}
         >
-          © 2025 Art Reach Cambodia
+          © 2026 Art Reach Cambodia
         </p>
       </footer>
     </div>
