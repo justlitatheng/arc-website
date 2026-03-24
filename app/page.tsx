@@ -302,6 +302,49 @@ export default function Home() {
             Our team comprises Khmer youth coordinators, animators,
             photographers, and creators who bring these stories to life.
           </p>
+
+          {/* Team cards */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-14">
+            {[
+              { name: "Lucklita Theng", role: "Founder & Storyteller" },
+              { name: "Ee Siev", role: "Music Producer" },
+              { name: "Phorn Panmai (Chi)", role: "Animator & Artist" },
+              { name: "Soeurt Roeurt", role: "Mentor Animator" },
+              { name: "Morn Chhuonh (Mori)", role: "Animator" },
+              { name: "Roy Vichheka (Kitt)", role: "Graphic Designer" },
+              { name: "Sreyvong Phen", role: "Animator" },
+              { name: "Kann Seraktepy", role: "Animator" },
+              { name: "Phirun Bobunleapmonytithya (Mony)", role: "Youth Coordinator" },
+              { name: "Phoeurt", role: "Animator & Video Editor" },
+              { name: "Morn Sreysros", role: "Youth Assistant" },
+              { name: "Laura Fernández", role: "General Consultant, Fundraising & Comms" },
+            ].map(({ name, role }) => (
+              <div key={name} className="flex flex-col items-center text-center">
+                <div
+                  className="mb-4 flex items-center justify-center"
+                  style={{ width: 80, height: 80, borderRadius: "50%", backgroundColor: "#E8E0F0" }}
+                >
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                    <circle cx="40" cy="29" r="13" fill="#C9B8E8" />
+                    <ellipse cx="40" cy="62" rx="20" ry="16" fill="#C9B8E8" />
+                  </svg>
+                </div>
+                <p
+                  className="text-sm font-medium leading-snug mb-1"
+                  style={{ color: "#1A1A2E", fontFamily: "var(--font-kantumruy)" }}
+                >
+                  {name}
+                </p>
+                <p
+                  className="text-xs leading-relaxed"
+                  style={{ color: "#7B6FA0", fontFamily: "var(--font-dm-sans)" }}
+                >
+                  {role}
+                </p>
+              </div>
+            ))}
+          </div>
+
           <blockquote
             className="border-l-2 pl-6"
             style={{ borderColor: "#C9B8E8" }}
