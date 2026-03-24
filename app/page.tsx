@@ -306,28 +306,38 @@ export default function Home() {
           {/* Team cards */}
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-14">
             {[
-              { name: "Lucklita Theng", role: "Founder & Storyteller" },
-              { name: "Ee Siev", role: "Music Producer" },
-              { name: "Phorn Panmai (Chi)", role: "Animator & Artist" },
-              { name: "Soeurt Roeurt", role: "Mentor Animator" },
-              { name: "Morn Chhuonh (Mori)", role: "Animator" },
-              { name: "Roy Vichheka (Kitt)", role: "Graphic Designer" },
-              { name: "Sreyvong Phen", role: "Animator" },
-              { name: "Kann Seraktepy", role: "Animator" },
-              { name: "Phirun Bobunleapmonytithya (Mony)", role: "Youth Coordinator" },
-              { name: "Phoeurt", role: "Animator & Video Editor" },
-              { name: "Morn Sreysros", role: "Youth Assistant" },
-              { name: "Laura Fernández", role: "General Consultant, Fundraising & Comms" },
-            ].map(({ name, role }) => (
+              { name: "Lucklita Theng", role: "Founder & Storyteller", photo: "/lucklita_theng.jpg" },
+              { name: "Ee Siev", role: "Music Producer", photo: "/ee_siev.jpg" },
+              { name: "Phorn Panmai (Chi)", role: "Animator & Artist", photo: "/phorn_phanmai.jpg" },
+              { name: "Soeurt Roeurt", role: "Mentor Animator", photo: "/soeurt_roeurt.jpg" },
+              { name: "Morn Chhounh (Mori)", role: "Animator", photo: "/morn_chhounh.jpg" },
+              { name: "Roy Vichheka (Kitt)", role: "Graphic Designer", photo: "/roy_vichheka.jpg" },
+              { name: "Sreyvong Phen", role: "Animator", photo: "/sreyvong_phen.jpg" },
+              { name: "Kann Seraktepy", role: "Animator", photo: "/kann_seraktepy.jpg", photoPosition: "top" },
+              { name: "Phirun Bobunleapmonytithya (Mony)", role: "Youth Coordinator", photo: "/phirun_titya.jpg" },
+              { name: "Phoeurt", role: "Animator & Video Editor", photo: "/phoeurt.jpg" },
+              { name: "Morn Sreysros", role: "Youth Assistant", photo: "/morn_sreysros.jpg" },
+              { name: "Laura Fernández", role: "General Consultant, Fundraising & Comms", photo: "/laura_fernandez.jpg" },
+            ].map(({ name, role, photo, photoPosition }) => (
               <div key={name} className="flex flex-col items-center text-center">
                 <div
-                  className="mb-4 flex items-center justify-center"
+                  className="mb-4 flex items-center justify-center overflow-hidden"
                   style={{ width: 80, height: 80, borderRadius: "50%", backgroundColor: "#E8E0F0" }}
                 >
-                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-                    <circle cx="40" cy="29" r="13" fill="#C9B8E8" />
-                    <ellipse cx="40" cy="62" rx="20" ry="16" fill="#C9B8E8" />
-                  </svg>
+                  {photo ? (
+                    <Image
+                      src={photo}
+                      alt={name}
+                      width={80}
+                      height={80}
+                      style={{ objectFit: "cover", objectPosition: photoPosition ?? "center", width: 80, height: 80 }}
+                    />
+                  ) : (
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                      <circle cx="40" cy="29" r="13" fill="#C9B8E8" />
+                      <ellipse cx="40" cy="62" rx="20" ry="16" fill="#C9B8E8" />
+                    </svg>
+                  )}
                 </div>
                 <p
                   className="text-sm font-medium leading-snug mb-1"
