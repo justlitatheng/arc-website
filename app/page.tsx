@@ -305,7 +305,7 @@ export default function Home() {
 
           {/* Team cards */}
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-14">
-            {[
+            {([
               { name: "Lucklita Theng", role: "Founder & Storyteller", photo: "/lucklita_theng.jpg" },
               { name: "Ee Siev", role: "Music Producer", photo: "/ee_siev.jpg" },
               { name: "Phorn Panmai (Chi)", role: "Animator & Artist", photo: "/phorn_phanmai.jpg" },
@@ -318,7 +318,7 @@ export default function Home() {
               { name: "Phoeurt", role: "Animator & Video Editor", photo: "/phoeurt.jpg" },
               { name: "Morn Sreysros", role: "Youth Assistant", photo: "/morn_sreysros.jpg", photoPosition: "center 20%" },
               { name: "Laura Fernández", role: "General Consultant, Fundraising & Comms", photo: "/laura_fernandez.jpg" },
-            ].map(({ name, role, photo, photoPosition, photoScale }) => (
+            ] as { name: string; role: string; photo: string | null; photoPosition?: string; photoScale?: number }[]).map(({ name, role, photo, photoPosition, photoScale }) => (
               <div key={name} className="flex flex-col items-center text-center">
                 <div
                   className="mb-4 flex items-center justify-center overflow-hidden"
