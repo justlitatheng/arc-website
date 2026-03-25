@@ -41,7 +41,7 @@ export default function Home() {
         />
         <div className="mb-8">
           <Image
-            src="/logo_ARC_01.png"
+            src="/logo_arc.png"
             alt="ARC — Art Reach Cambodia logo"
             width={200}
             height={200}
