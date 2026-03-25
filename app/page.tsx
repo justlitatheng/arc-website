@@ -192,9 +192,9 @@ export default function Home() {
             className="text-base sm:text-lg leading-relaxed mb-12"
             style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)" }}
           >
-            Our first documentary video series features 13 Cambodian
-            individuals across two chapters — each telling their own story, in
-            their own words.
+            Our first documentary video series highlights 13 Cambodian
+            individuals across two chapters — their life, their craft, their
+            words. Together, one living portrait of a culture in motion.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {/* Column 1 */}
@@ -309,16 +309,16 @@ export default function Home() {
               { name: "Lucklita Theng", role: "Founder & Storyteller", photo: "/lucklita_theng.jpg" },
               { name: "Ee Siev", role: "Music Producer", photo: "/ee_siev.jpg" },
               { name: "Phorn Panmai (Chi)", role: "Animator & Artist", photo: "/phorn_phanmai.jpg" },
-              { name: "Soeurt Roeurt", role: "Mentor Animator", photo: "/soeurt_roeurt.jpg" },
+              { name: "Soeurt Roeurt", role: "Mentor Animator", photo: "/soeurt_roeurt.jpg", photoPosition: "top" },
               { name: "Morn Chhounh (Mori)", role: "Animator", photo: "/morn_chhounh.jpg" },
               { name: "Roy Vichheka (Kitt)", role: "Graphic Designer", photo: "/roy_vichheka.jpg" },
               { name: "Sreyvong Phen", role: "Animator", photo: "/sreyvong_phen.jpg" },
               { name: "Kann Seraktepy", role: "Animator", photo: "/kann_seraktepy.jpg", photoPosition: "top" },
               { name: "Phirun Bobunleapmonytithya (Mony)", role: "Youth Coordinator", photo: "/phirun_titya.jpg" },
               { name: "Phoeurt", role: "Animator & Video Editor", photo: "/phoeurt.jpg" },
-              { name: "Morn Sreysros", role: "Youth Assistant", photo: "/morn_sreysros.jpg" },
+              { name: "Morn Sreysros", role: "Youth Assistant", photo: "/morn_sreysros.jpg", photoPosition: "center 20%" },
               { name: "Laura Fernández", role: "General Consultant, Fundraising & Comms", photo: "/laura_fernandez.jpg" },
-            ].map(({ name, role, photo, photoPosition }) => (
+            ].map(({ name, role, photo, photoPosition, photoScale }) => (
               <div key={name} className="flex flex-col items-center text-center">
                 <div
                   className="mb-4 flex items-center justify-center overflow-hidden"
@@ -330,7 +330,7 @@ export default function Home() {
                       alt={name}
                       width={80}
                       height={80}
-                      style={{ objectFit: "cover", objectPosition: photoPosition ?? "center", width: 80, height: 80 }}
+                      style={{ objectFit: "cover", objectPosition: photoPosition ?? "center", width: 80, height: 80, transform: photoScale ? `scale(${photoScale})` : undefined }}
                     />
                   ) : (
                     <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
@@ -360,30 +360,34 @@ export default function Home() {
             style={{ borderColor: "#C9B8E8" }}
           >
             <p
-              className="text-base sm:text-lg leading-relaxed mb-6 italic"
+              className="text-sm sm:text-base leading-relaxed italic mb-5"
               style={{ color: "#5A4E78", fontFamily: "var(--font-dm-sans)" }}
             >
-              &ldquo;ARC started from something personal. As a Khmer person
-              who has grown up living between worlds, I found myself wanting
-              to learn more — not just about Cambodia&apos;s past, but about
-              the full, breathing spectrum of who Khmer people are, have been,
-              and are becoming. In a world growing more cross-cultural and
-              interconnected, many of us find ourselves navigating multiple
-              identities at once. The more I looked, the more I found.
-              Artists, athletes, writers, dreamers, and creators of all kinds
-              — each one a color, a weave, a pattern in something far more
-              beautiful than any single story could contain.
+              &ldquo;Every person in this project carries a world inside them.
+              They are Khmer. They are also so much more — and they have been,
+              long before anyone thought to document it.&rdquo;
             </p>
             <p
-              className="text-base sm:text-lg leading-relaxed italic"
+              className="text-sm sm:text-base leading-relaxed italic mb-5"
               style={{ color: "#5A4E78", fontFamily: "var(--font-dm-sans)" }}
             >
-              ARC is my way of continuing that discovery, and contributing to
-              it. Not to make a point, but because these stories are worth
-              knowing, worth preserving, and worth celebrating. Because I am
-              Khmer too, and this is my way of falling more in love with where
-              I come from — and sharing that love with anyone who wants to
-              look.&rdquo;
+              &ldquo;This project started from a simple, persistent question:
+              what does Cambodia look like when you look beyond the stories the
+              world already knows? The more we looked, the more we found.
+              Artists, athletes, writers, dreamers, and creators of all kinds
+              — each one a color, a weave, a pattern in something far more
+              beautiful than any single story could contain.&rdquo;
+            </p>
+            <p
+              className="text-sm sm:text-base leading-relaxed italic"
+              style={{ color: "#5A4E78", fontFamily: "var(--font-dm-sans)" }}
+            >
+              &ldquo;These stories were already happening. We just wanted to
+              make sure they didn&apos;t go unwitnessed. In a world growing
+              more cross-cultural and interconnected, stories like these don&apos;t
+              just belong to Cambodia. They belong to all of us navigating
+              what it means to come from somewhere — and to be becoming
+              something.&rdquo;
             </p>
           </blockquote>
           <div className="flex flex-wrap gap-3 mt-10">

@@ -8,7 +8,7 @@ export default function DragonFly({ width = 140 }: DragonFlyProps) {
 
   return (
     <svg
-      viewBox="0 0 140 110"
+      viewBox="-10 -5 160 120"
       width={width}
       height={height}
       style={{ animation: "hover 2.4s ease-in-out infinite" }}
