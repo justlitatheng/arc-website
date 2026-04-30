@@ -1,5 +1,7 @@
 import Image from "next/image";
 import DragonFly from "@/components/DragonFly";
+import TeamCard from "@/components/TeamCard";
+import SubjectCard from "@/components/SubjectCard";
 
 export default function Home() {
   return (
@@ -62,7 +64,7 @@ export default function Home() {
           className="text-sm sm:text-base tracking-[0.18em]"
           style={{ color: "#C9B8E8", fontFamily: "var(--font-dm-sans)" }}
         >
-          រឿងរ៉ាវខ្មែរ — Khmer Stories, Living and Breathing
+          Khmer Stories, Living and Breathing
         </p>
       </section>
 
@@ -150,15 +152,6 @@ export default function Home() {
             being woven, and every thread matters.
           </p>
           <p
-            className="text-3xl sm:text-4xl leading-snug mb-4"
-            style={{
-              color: "#1A1A2E",
-              fontFamily: "var(--font-kantumruy)",
-            }}
-          >
-            យើងមិនជាប់គាំងនៅក្នុងអតីតកាលទេ។
-          </p>
-          <p
             className="text-sm tracking-wide italic"
             style={{ color: "#7B6FA0", fontFamily: "var(--font-dm-sans)" }}
           >
@@ -196,76 +189,45 @@ export default function Home() {
             individuals across two chapters — their life, their craft, their
             words. Together, one living portrait of a culture in motion.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-            {/* Column 1 */}
-            <div>
-              <p
-                className="text-xs tracking-[0.25em] uppercase mb-5 pb-2 border-b"
-                style={{
-                  color: "#7B6FA0",
-                  borderColor: "#C9B8E8",
-                  fontFamily: "var(--font-dm-sans)",
-                }}
-              >
-                Creatives &amp; Artists
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Sina Sans — Emmy Award winning VFX artist",
-                  "Koeurm Kolab — Visual artist and teacher",
-                  "Kim Dyna — Novelist and writer",
-                  "Monysovanya Fia — Visual artist, arts & mental health",
-                  "Keo Chandalin — Singer",
-                  "Moy Hou — Animator and visual artist",
-                  "Suong Rota — Movie director",
-                  "Choulay Mech — Photographer",
-                ].map((name) => (
-                  <li
-                    key={name}
-                    className="text-sm leading-relaxed"
-                    style={{
-                      color: "#2A2A3E",
-                      fontFamily: "var(--font-dm-sans)",
-                    }}
-                  >
-                    {name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Column 2 */}
-            <div>
-              <p
-                className="text-xs tracking-[0.25em] uppercase mb-5 pb-2 border-b"
-                style={{
-                  color: "#7B6FA0",
-                  borderColor: "#C9B8E8",
-                  fontFamily: "var(--font-dm-sans)",
-                }}
-              >
-                Athletes
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Tharoth Sam — Actress and martial artist",
-                  "Muyngim Eng — Long-distance runner, SheRuns founder",
-                  "Hem Thon Vitiny — Olympic swimmer",
-                  "Sokhen Thai — Paralympic chess player",
-                  "Seang Sokchan — Paralympic basketball player & coach",
-                ].map((name) => (
-                  <li
-                    key={name}
-                    className="text-sm leading-relaxed"
-                    style={{
-                      color: "#2A2A3E",
-                      fontFamily: "var(--font-dm-sans)",
-                    }}
-                  >
-                    {name}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Creatives & Artists */}
+          <p
+            className="text-xs tracking-[0.25em] uppercase mb-5 pb-2 border-b"
+            style={{ color: "#7B6FA0", borderColor: "#C9B8E8", fontFamily: "var(--font-dm-sans)" }}
+          >
+            Creatives &amp; Artists
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
+            {[
+              { name: "Sina Sans", descriptor: "Emmy Award winning VFX artist" },
+              { name: "Koeurm Kolab", descriptor: "Visual artist and teacher" },
+              { name: "Kim Dyna", descriptor: "Novelist and writer" },
+              { name: "Monysovanya Fia", descriptor: "Visual artist & mental health advocate" },
+              { name: "Keo Chandalin", descriptor: "Singer" },
+              { name: "Moy Hou", descriptor: "Animator and visual artist" },
+              { name: "Suong Rota", descriptor: "Movie director" },
+              { name: "Choulay Mech", descriptor: "Photographer" },
+            ].map(({ name, descriptor }) => (
+              <SubjectCard key={name} name={name} descriptor={descriptor} accentColor="#C9B8E8" />
+            ))}
+          </div>
+
+          {/* Athletes */}
+          <p
+            className="text-xs tracking-[0.25em] uppercase mb-5 pb-2 border-b"
+            style={{ color: "#7B6FA0", borderColor: "#C9B8E8", fontFamily: "var(--font-dm-sans)" }}
+          >
+            Athletes
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {[
+              { name: "Tharoth Sam", descriptor: "Actress and martial artist" },
+              { name: "Muyngim Eng", descriptor: "Long-distance runner, SheRuns founder" },
+              { name: "Hem Thon Vitiny", descriptor: "Olympic swimmer" },
+              { name: "Sokhen Thai", descriptor: "Paralympic chess player" },
+              { name: "Seang Sokchan", descriptor: "Paralympic basketball player & coach" },
+            ].map(({ name, descriptor }) => (
+              <SubjectCard key={name} name={name} descriptor={descriptor} accentColor="#B8D4C8" />
+            ))}
           </div>
         </div>
       </section>
@@ -304,7 +266,7 @@ export default function Home() {
           </p>
 
           {/* Team cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-14">
             {([
               { name: "Lucklita Theng", role: "Founder & Storyteller", photo: "/lucklita_theng.jpg" },
               { name: "Ee Siev", role: "Music Producer", photo: "/ee_siev.jpg" },
@@ -313,45 +275,13 @@ export default function Home() {
               { name: "Morn Chhounh (Mori)", role: "Animator", photo: "/morn_chhounh.jpg" },
               { name: "Roy Vichheka (Kitt)", role: "Graphic Designer", photo: "/roy_vichheka.jpg" },
               { name: "Sreyvong Phen", role: "Animator", photo: "/sreyvong_phen.jpg" },
-              { name: "Kann Seraktepy", role: "Animator", photo: "/kann_seraktepy.jpg", photoPosition: "top" },
+              { name: "Kann Seraktepy", role: "Animator", photo: null },
               { name: "Phirun Bobunleapmonytithya (Mony)", role: "Youth Coordinator", photo: "/phirun_titya.jpg" },
               { name: "Phoeurt", role: "Animator & Video Editor", photo: "/phoeurt.jpg" },
               { name: "Morn Sreysros", role: "Youth Assistant", photo: "/morn_sreysros.jpg", photoPosition: "center 20%" },
               { name: "Laura Fernández", role: "General Consultant, Fundraising & Comms", photo: "/laura_fernandez.jpg" },
-            ] as { name: string; role: string; photo: string | null; photoPosition?: string; photoScale?: number }[]).map(({ name, role, photo, photoPosition, photoScale }) => (
-              <div key={name} className="flex flex-col items-center text-center">
-                <div
-                  className="mb-4 flex items-center justify-center overflow-hidden"
-                  style={{ width: 80, height: 80, borderRadius: "50%", backgroundColor: "#E8E0F0" }}
-                >
-                  {photo ? (
-                    <Image
-                      src={photo}
-                      alt={name}
-                      width={80}
-                      height={80}
-                      style={{ objectFit: "cover", objectPosition: photoPosition ?? "center", width: 80, height: 80, transform: photoScale ? `scale(${photoScale})` : undefined }}
-                    />
-                  ) : (
-                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-                      <circle cx="40" cy="29" r="13" fill="#C9B8E8" />
-                      <ellipse cx="40" cy="62" rx="20" ry="16" fill="#C9B8E8" />
-                    </svg>
-                  )}
-                </div>
-                <p
-                  className="text-sm font-medium leading-snug mb-1"
-                  style={{ color: "#1A1A2E", fontFamily: "var(--font-kantumruy)" }}
-                >
-                  {name}
-                </p>
-                <p
-                  className="text-xs leading-relaxed"
-                  style={{ color: "#7B6FA0", fontFamily: "var(--font-dm-sans)" }}
-                >
-                  {role}
-                </p>
-              </div>
+            ] as { name: string; role: string; photo: string | null; photoPosition?: string }[]).map(({ name, role, photo, photoPosition }) => (
+              <TeamCard key={name} name={name} role={role} photo={photo} photoPosition={photoPosition} />
             ))}
           </div>
 
@@ -419,15 +349,6 @@ export default function Home() {
         style={{ backgroundColor: "#1A1A2E" }}
       >
         <div className="max-w-[600px] mx-auto">
-          <p
-            className="text-3xl sm:text-4xl mb-4 leading-snug"
-            style={{
-              color: "#E8E0F0",
-              fontFamily: "var(--font-kantumruy)",
-            }}
-          >
-            រាល់រឿងរ៉ាវមានតម្លៃ។
-          </p>
           <p
             className="text-sm tracking-[0.2em] mb-10"
             style={{ color: "#C9B8E8", fontFamily: "var(--font-dm-sans)" }}
