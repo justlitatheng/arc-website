@@ -70,7 +70,7 @@ export default function TeamCard({ name, role, photo, photoPosition }: TeamCardP
           <p style={{ color: "#1A1A2E", fontFamily: "var(--font-kantumruy)", fontSize: "0.85rem", fontWeight: 600, lineHeight: 1.3, marginBottom: "0.35rem" }}>
             {name}
           </p>
-          <p style={{ color: "#7B6FA0", fontFamily: "var(--font-dm-sans)", fontSize: "0.7rem", lineHeight: 1.5 }}>
+          <p style={{ color: "#7B6FA0", fontFamily: "var(--font-kantumruy)", fontSize: "0.7rem", lineHeight: 1.5 }}>
             {role}
           </p>
         </div>
@@ -95,10 +95,10 @@ export default function TeamCard({ name, role, photo, photoPosition }: TeamCardP
         <p style={{ color: "#1A1A2E", fontFamily: "var(--font-kantumruy)", fontSize: "0.78rem", fontWeight: 600, lineHeight: 1.2, margin: 0 }}>
           {name}
         </p>
-        <p style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)", fontSize: "0.7rem", lineHeight: 1.5, fontWeight: 300, margin: 0 }}>
+        <p style={{ color: "#2A2A3E", fontFamily: "var(--font-kantumruy)", fontSize: "0.7rem", lineHeight: 1.5, fontWeight: 300, margin: 0 }}>
           Favourite artist: —
         </p>
-        <p style={{ color: "#2A2A3E", fontFamily: "var(--font-dm-sans)", fontSize: "0.7rem", lineHeight: 1.5, fontWeight: 300, margin: 0 }}>
+        <p style={{ color: "#2A2A3E", fontFamily: "var(--font-kantumruy)", fontSize: "0.7rem", lineHeight: 1.5, fontWeight: 300, margin: 0 }}>
           Comfort food: —
         </p>
       </div>

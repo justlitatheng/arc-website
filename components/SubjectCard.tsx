@@ -82,7 +82,7 @@ export default function SubjectCard({ name, descriptor, accentColor = "#C9B8E8" 
           <p
             style={{
               color: "#7B6FA0",
-              fontFamily: "var(--font-dm-sans)",
+              fontFamily: "var(--font-kantumruy)",
               fontSize: "0.67rem",
               lineHeight: 1.4,
               display: "-webkit-box",
