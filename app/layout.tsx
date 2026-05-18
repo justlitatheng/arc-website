@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Kantumruy_Pro, DM_Sans } from "next/font/google";
+import { Kantumruy_Pro, Lora } from "next/font/google";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const kantumruyPro = Kantumruy_Pro({
@@ -9,10 +11,10 @@ const kantumruyPro = Kantumruy_Pro({
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "600"],
   display: "swap",
 });
 
@@ -30,9 +32,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${kantumruyPro.variable} ${dmSans.variable}`}
+      className={`${kantumruyPro.variable} ${lora.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

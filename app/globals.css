@@ -11,8 +11,8 @@
   --color-deep-purple: #3C3489;
   --color-offwhite: #FAFAF8;
 
-  --font-heading: var(--font-kantumruy);
-  --font-body: var(--font-dm-sans);
+  --font-heading: var(--font-lora);
+  --font-body: var(--font-kantumruy);
 }
 
 @keyframes flapTop {
@@ -36,11 +36,26 @@
   50%       { transform: translateY(-4px); }
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #C9B8E8;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background: var(--color-pistachio);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-family: var(--font-kantumruy), system-ui, sans-serif;
 }
